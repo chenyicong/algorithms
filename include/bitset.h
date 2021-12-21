@@ -74,7 +74,7 @@ namespace alg {
 
 				uint32_t n = bit/8;
 				uint32_t off = bit%8;
-
+                                //added by chenyc, 余数这个bit，无所谓位置，只要set unset test遵守同样的规则即可，深究的话 128U>>（7-off) 比较合理
 				m_bits[n] &= ~(128U>>off);
 			}
 
