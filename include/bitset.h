@@ -62,7 +62,7 @@ namespace alg {
 
 				uint32_t n = bit/8;
 				uint32_t off = bit%8;
-
+				//added by chenyc,只要遵守一样的规则，在余数所在的0-7bit这里，无所谓off bit在前面还是在后面，原则上，128U>>（7-off）更合适
 				m_bits[n] |= 128U>>off;
 			}
 
